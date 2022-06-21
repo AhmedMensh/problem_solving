@@ -10,24 +10,14 @@ fun main() {
 }
 
 fun balancedStringSplit(s: String): Int {
-
-
     var count = 0
-
     var lCounts = 0
-
     s.forEach {
         when (it) {
-            'L' -> {
-                lCounts++
-            }
-            'R' -> {
-                lCounts--
-            }
+            'L' -> lCounts++
+            'R' -> lCounts--
         }
         if (lCounts == 0) count++
-
-
     }
 //    val stack = Stack<Char>()
 //    s.forEach {
