@@ -2,7 +2,13 @@ package leetcode
 
 fun main() {
     println(
-        diagonalSum(arrayOf(intArrayOf(1, 2, 3), intArrayOf(4, 5, 6), intArrayOf(7, 8, 9)))
+        diagonalSum(
+            arrayOf(
+                intArrayOf(1, 2, 3),
+                intArrayOf(4, 5, 6),
+                intArrayOf(7, 8, 9)
+            )
+        )
     )
 }
 
@@ -12,7 +18,7 @@ fun diagonalSum(mat: Array<IntArray>): Int {
 
     var sum = 0
     for (i in mat.indices) {
-        sum += mat[i][i] +mat[i][secondaryDiagonalIndex--]
+        sum += mat[i][i] + mat[i][secondaryDiagonalIndex--]
     }
 
     if (mat.size % 2 != 0) {
