@@ -3,10 +3,10 @@ package leetcode.tree
 fun main() {
 
     val treeNode1 = TreeNode(5)
-//    val treeNode2 = TreeNode(5)
-//    val treeNode3 = TreeNode(5)
-//    treeNode1.left = treeNode2
-//    treeNode1.right = treeNode3
+    val treeNode2 = TreeNode(5)
+    val treeNode3 = TreeNode(5)
+    treeNode1.left = treeNode2
+    treeNode1.right = treeNode3
 
     print(maxDepth(treeNode1)
     )
