@@ -1,5 +1,7 @@
 package leetcode
 
+import leetcode.tree.TreeNode
+
 /**
  * Example:
  * var ti = TreeNode(5)

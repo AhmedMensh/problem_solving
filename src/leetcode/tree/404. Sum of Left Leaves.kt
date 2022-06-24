@@ -1,4 +1,4 @@
-package leetcode
+package leetcode.tree
 
 fun main() {
 
@@ -24,7 +24,7 @@ class Solution1 {
         return sum
     }
 
-    fun sol(root: TreeNode?,isLeft : Boolean) {
+    fun sol(root: TreeNode?, isLeft : Boolean) {
 
         if (root == null ) return
         if(isLeft && root.left == null && root.right == null) sum+=root.`val`

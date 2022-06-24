@@ -1,4 +1,4 @@
-package leetcode
+package leetcode.tree
 
 fun inorderTraversal(root: TreeNode?): List<Int> {
 
@@ -9,7 +9,7 @@ fun inorderTraversal(root: TreeNode?): List<Int> {
 
 
 
-fun inorderTraversal(root: TreeNode?,list: MutableList<Int>) {
+fun inorderTraversal(root: TreeNode?, list: MutableList<Int>) {
 
     if (root == null) return
     inorderTraversal(root.left,list)
