@@ -9,22 +9,13 @@ fun main() {
         3, 3
     )
 }
-
-fun matrixReshape(mat: Array<IntArray>, r: Int, c: Int): Array<IntArray> {
-
-    val originalMatRows = mat.size
-    val originalMatColumns = mat[0].size
-
-    if (r * c != originalMatRows * originalMatColumns || (originalMatColumns == c && originalMatRows == r)) return mat
-
-    var shapedMat = Array(r){ intArrayOf()}
-
-
-    for (i in mat.indices){
-        for (j in mat[i].indices){
-            val arr = intArrayOf()
-
-        }
+fun matrixReshape(mat: Array<IntArray>, r: Int, c: Int): Array<IntArray>? {
+    if (mat.isEmpty() || r * c != mat.size * mat[0].size) return mat
+    val ans = Array(r) { IntArray(c) }
+    var k = 0
+    for (row in mat) for (num in row) {
+        ans[k / c][k % c] = num
+        ++k
     }
-    return mat
+    return ans
 }
