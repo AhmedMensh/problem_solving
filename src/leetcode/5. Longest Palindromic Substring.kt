@@ -1,6 +1,5 @@
 package leetcode
 
-import java.lang.StringBuilder
 
 fun main() {
     print(longestPalindrome("cbbd"))

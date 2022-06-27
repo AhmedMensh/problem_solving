@@ -1,24 +1,22 @@
 package leetcode
 
 fun main() {
-    val res = strStr("hello", "ll")
-//    print(res)
+    val res = strStr("abc", "c")
+    print(res)
 }
 
 fun strStr(haystack: String, needle: String): Int {
+    if (needle.isEmpty() || needle == haystack) return 0
 
-    if (needle.isEmpty()) return 0
-    var needleIndex = 0
-    var haystackIndex = 0
-    while (haystackIndex < haystack.length && needle.length < needleIndex) {
+    for (i in haystack.indices){
+        var needleIndex = 0
+        for (j in i until haystack.length){
 
-    }
-    haystack.forEachIndexed { index, c ->
-        if (needleIndex < needle.length && c == needle[needleIndex]) {
+            if (needleIndex == needle.length || haystack[j] != needle[needleIndex]) break
             needleIndex++
         }
+        if (needleIndex == needle.length) return i
     }
-    println(needle.length)
-    println(needleIndex)
-    return if (needleIndex == needle.length) needleIndex else -1
+
+    return -1
 }
