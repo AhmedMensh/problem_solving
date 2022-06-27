@@ -11,12 +11,10 @@ fun strStr(haystack: String, needle: String): Int {
     for (i in haystack.indices){
         var needleIndex = 0
         for (j in i until haystack.length){
-
             if (needleIndex == needle.length || haystack[j] != needle[needleIndex]) break
             needleIndex++
         }
         if (needleIndex == needle.length) return i
     }
-
     return -1
 }
