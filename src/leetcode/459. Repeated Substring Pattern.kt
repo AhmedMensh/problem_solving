@@ -1,7 +1,7 @@
 package leetcode
 
 fun main() {
-//    abaababaab
+
     print(repeatedSubstringPattern("abaababaab")
     )
 }
