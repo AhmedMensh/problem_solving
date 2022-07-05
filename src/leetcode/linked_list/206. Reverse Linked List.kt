@@ -9,13 +9,15 @@ fun main() {
 //    val l6 = ListNode(9)
 //    val l7 = ListNode(9)
     ls1.next = ls2
-    ls2.next = ls3
-    ls3.next = ls4
-   var res = reverseList(ls1)
-    while (res != null){
-        println(res.`val`)
-        res = res.next
-    }
+//    ls2.next = ls3
+//    ls3.next = ls4
+//   var res = reverseList(ls1)
+//    while (res != null){
+//        println(res.`val`)
+//        res = res.next
+//    }
+
+    print(getKNodeFromTheLast(ls1,1))
 }
 fun reverseList(head: ListNode?): ListNode? {
 
@@ -32,3 +34,22 @@ fun reverseList(head: ListNode?): ListNode? {
     }
     return preivous
 }
+
+fun getKNodeFromTheLast(head: ListNode?,k : Int) : ListNode?{
+
+    var first = head
+    var second = head
+
+    for (i in 0 until k){
+        second = second?.next
+    }
+
+    while (second?.next != null){
+        first = first?.next
+        second = second.next
+    }
+
+    return  first
+}
+
+
