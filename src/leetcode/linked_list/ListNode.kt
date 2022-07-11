@@ -7,6 +7,6 @@ package leetcode.linked_list
  * var v = li.`val`
  * Definition for singly-linked list.
  */
-   class ListNode(var `val`: Int) {
+    class ListNode(var `val`: Int) {
       var next: ListNode? = null
   }
